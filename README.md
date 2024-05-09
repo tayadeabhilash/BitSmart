@@ -4,10 +4,14 @@
 BitSmart is a machine learning project focused on Bitcoin price prediction and swing trading. Utilizing advanced algorithms and data analysis, we aim to provide insights into the volatile world of cryptocurrency markets.
 
 ## Team Members 
-- Umang Patel 017450953
-- Abhilash Tayede 016730129
-- Ishan Kiran Girgaonkar 017453696
--  Kevin Thomas 017401202
+
+| ID            |  Name                   | Email                         |
+| ------------- | ------------------------| ----------------------------- |
+| 017450953     | Umang Patel             | umang.patel@sjsu.edu          |
+| 016730129     | Abhilash Tayede         | abhilash.tayade@sjsu.edu      |
+| 017453696     | Ishan Kiran Girgaonkar  | ishankiran.girgaonkar@sjsu.edu|
+| 017401202     | Kevin Thomas            | kevin.g.thomas@sjsu.edu       |
+
 
 ## URl to access the app https://bitcointrader.streamlit.app/Plotting_Demo
 
