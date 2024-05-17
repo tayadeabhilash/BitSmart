@@ -13,7 +13,7 @@ BitSmart is a machine learning project focused on Bitcoin price prediction and s
 | 017401202     | Kevin Thomas            | kevin.g.thomas@sjsu.edu       |
 
 
-## URl to access the app https://bitcointrader.streamlit.app/Plotting_Demo
+## URl to access the app https://bitcointrader.streamlit.app
 
 ## Repository Structure
 - App: This directory contains the Streamlit application code, providing a directly linked platform for users to engage with the project.
