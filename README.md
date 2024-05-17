@@ -20,7 +20,8 @@ BitSmart is a machine learning project focused on Bitcoin price prediction and s
 - EDA (Exploratory Data Analysis): Explore this folder for data exploration, visualization, and model experimentation processes. These insights informed the development of our predictive models.
 
 ## High-Level Design Diagram 
-<<- Coming soon... ->> 
+<img src="https://github.com/tayadeabhilash/bitcointrader/blob/main/EDA/Diagram.png" alt="diagram" width="600" height="350">
+
 
  
 
