@@ -20,29 +20,33 @@ LOGGER = get_logger(__name__)
 
 def run():
     st.set_page_config(
-        page_title="Hello",
-        page_icon="👋",
+        page_title="Bitsmart",
+        page_icon="🚀",
     )
 
-    st.write("# Welcome to Streamlit! 👋")
+    st.write("# Welcome to BitSmart! 🚀")
 
-    st.sidebar.success("Select a demo above.")
+    st.sidebar.success("Select the Console above.")
 
     st.markdown(
         """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
-        **👈 Select a demo from the sidebar** to see some examples
-        of what Streamlit can do!
-        ### Want to learn more?
-        - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
-        - Ask a question in our [community
-          forums](https://discuss.streamlit.io)
-        ### See more complex demos
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
+        BitSmart is a Machine learing based Bitcoin Price Prediction recommendating 
+        Swing trading strategies.
+
+        **👈 Select the console from the sidebar** to see it yourself of what Bitsmart can do!
+
+        ### Team Meambers
+        - Umang Patel 
+        - Abhilash Tayede
+        - Kevin Thomas
+        - Ishan Kiran Girgaonkar
+      
+        ### Disclaimer 
+        - The content on this website is for informational purposes only and should not be considered as financial advice. All investment decisions are at your own risk.
+        
+        ### Educational Purpose
+        - The project is implemented for educational purposes during a course work for a class. 
+        - It is intended to provide practical experience with Machine Learing methodologies and techniques.
     """
     )
 
