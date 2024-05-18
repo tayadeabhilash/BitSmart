@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from datetime import timedelta, datetime
+from swing_trade import swing_trade_fn
 
 st.set_page_config(page_title="BitSmart Prediction Console", layout="wide")
 
@@ -229,7 +230,7 @@ with col2:
     st.write("Average Closing Price:", sum(prices) / len(prices))
 
 # Trading strategy section
-
+sell, buy = swing_trade_fn(predicted_df, 75, 73000)
 col1, col2 = st.columns([1, 1])
 with col1:
     st.subheader("Recommended Swing Trading Strategy:")
@@ -241,10 +242,9 @@ with col1:
     st.write("Sell All")
     st.write("All In")
 with col2:
-    # Replace with actual recommendation logic (e.g., based on price trend)
     sell_date = prices.index(max(prices)) + 1
-    st.write(f"Day {sell_date}")
-    st.write("NA")
+    st.write(f"Day {sell}")
+    st.write(f"Day {buy}")
 
 # Disclaimer section
 
