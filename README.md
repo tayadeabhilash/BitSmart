@@ -8,7 +8,7 @@ BitSmart is a machine learning project focused on Bitcoin price prediction and s
 | ID            |  Name                   | Email                         |
 | ------------- | ------------------------| ----------------------------- |
 | 017450953     | Umang Patel             | umang.patel@sjsu.edu          |
-| 016730129     | Abhilash Tayede         | abhilash.tayade@sjsu.edu      |
+| 016730129     | Abhilash Tayade         | abhilash.tayade@sjsu.edu      |
 | 017453696     | Ishan Kiran Girgaonkar  | ishankiran.girgaonkar@sjsu.edu|
 | 017401202     | Kevin Thomas            | kevin.g.thomas@sjsu.edu       |
 
