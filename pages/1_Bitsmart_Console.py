@@ -23,20 +23,18 @@ with col3:
 
 
 # Input section with date picker
-col1, col2 = st.columns([1, 2])
-with col1:
-    today = st.date_input("Assume today's date is:", max_value=todayDate)
-with col2:
-    if st.button("Predict"):
-        st.success("BitSmart has made the following predictions:")
+
+today = st.date_input("Assume today's date is:", max_value=todayDate)
+
 
 # Load the trained model
+today += timedelta(days=1)
 model = load_model("model.h5")
 stocks = ['BTC-USD']
 stock = stocks[0]
-stock_data = yf.download(stock, start='2018-01-01', end=today.strftime("%Y-%m-%d"))
+stock_data = yf.download(stock, start='2022-01-01', end=today.strftime("%Y-%m-%d"))
 ohlc = stock_data[['Open', 'High', 'Low', 'Close']].values
-scaler = MinMaxScaler(feature_range=(0,1))
+scaler = MinMaxScaler(feature_range=(0, 1))
 scaled_ohlc = scaler.fit_transform(ohlc)
 predicted_prices = []
 seq_length = 60
@@ -65,6 +63,21 @@ print(predictions)
 
 # Sample price data (replace with actual data fetching logic)
 prices = predicted_df['Close'].tolist()
+high_prices = predicted_df['High'].tolist()
+low_prices = predicted_df['Low'].tolist()
+
+
+# Display table with predicted values and Predicted Prices (USD) section
+col1, col2 = st.columns([1, 1])
+with col1:
+    st.subheader("Predicted Prices (USD)")
+    st.write("Highest Price:", max(high_prices))
+    st.write("Lowest Price:", min(low_prices))
+    st.write("Average Closing Price:", sum(prices) / len(prices))
+
+with col2:
+    st.subheader("Predicted Prices Table")
+    st.dataframe(predicted_df)
 
 def create_chart(chart_type, fig_height, fig_width):
     fig = None
@@ -206,6 +219,7 @@ def data_chart(Data_type, fig_height, fig_width):
             )
     return fig
 
+
 # Display the charts side by side
 col1, col2 = st.columns(2)
 with col1:
@@ -217,27 +231,16 @@ with col2:
     Data_type = st.selectbox("Select Data Type for Single plot", ("Close", "High", "Open", "Low"))
     st.plotly_chart(data_chart(Data_type, fig_width=550, fig_height=450))
 
-# Display table with predicted values and Predicted Prices (USD) section
-col1, col2 = st.columns([2, 1])
-with col1:
-    st.subheader("Predicted Prices Table")
-    st.dataframe(predicted_df)
-
-with col2:
-    st.subheader("Predicted Prices (USD)")
-    st.write("Highest Price:", max(prices))
-    st.write("Lowest Price:", min(prices))
-    st.write("Average Closing Price:", sum(prices) / len(prices))
 
 # Trading strategy section
-sell, buy = swing_trade_fn(predicted_df, 75, 73000)
+sell, buy = swing_trade_fn(predicted_df, 0)
 col1, col2 = st.columns([1, 1])
 with col1:
     st.subheader("Recommended Swing Trading Strategy:")
 with col2:
     st.write("")
 
-col1, col2 = st.columns([1, 1])
+col1, col2 = st.columns([1, 2])
 with col1:
     st.write("Sell All")
     st.write("All In")

@@ -37,7 +37,7 @@ def run():
 
         ### Team Meambers
         - Umang Patel 
-        - Abhilash Tayede
+        - Abhilash Tayade
         - Kevin Thomas
         - Ishan Kiran Girgaonkar
       

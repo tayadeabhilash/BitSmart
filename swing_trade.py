@@ -1,8 +1,7 @@
-def swing_trade_fn(df, low_threshold, high_threshold):
+def swing_trade_fn(df, low_threshold):
     max_profit = -float('inf')
     start_date = None
     end_date = None
-    print("Hello")
     open_prices = df['Open']
     print(open_prices)
     for i, (date, sell_price) in enumerate(open_prices.items()):
@@ -14,10 +13,9 @@ def swing_trade_fn(df, low_threshold, high_threshold):
                 print(start_date, end_date)
 
     if max_profit <= low_threshold:
-        start_date = None
-        end_date = None
+        return None, None
 
-    if max(open_prices) > high_threshold:
-        return open_prices.idxmax(), None
+    if open_prices[end_date] > df['Close'].iloc[-1]:
+        end_date = None
 
     return start_date, end_date
