@@ -61,7 +61,6 @@ predictions[stock] = predicted_df
 # Print the predictions
 print(predictions)
 
-# Sample price data (replace with actual data fetching logic)
 prices = predicted_df['Close'].tolist()
 high_prices = predicted_df['High'].tolist()
 low_prices = predicted_df['Low'].tolist()
