@@ -7,12 +7,22 @@ Contributors: Umang Patel, Abhilash Tayade, Ishan Kiran Girgaonkar, Kevin Thomas
 
 ## URl to access the app https://bitcointrader.streamlit.app
 
+## Screenshots
+<div align=center>
+  <img src="https://github.com/tayadeabhilash/bitcointrader/blob/main/EDA/1.png" alt="diagram"> <hr>
+  <img src="https://github.com/tayadeabhilash/bitcointrader/blob/main/EDA/2.png" alt="diagram"> <hr>
+  <img src="https://github.com/tayadeabhilash/bitcointrader/blob/main/EDA/3.png" alt="diagram">
+
+</div>
+
 ## Repository Structure
 - App: This directory contains the Streamlit application code, providing a directly linked platform for users to engage with the project.
 - EDA (Exploratory Data Analysis): Explore this folder for data exploration, visualization, and model experimentation processes. These insights informed the development of our predictive models.
 
 ## High-Level Design Diagram 
-<img src="https://github.com/tayadeabhilash/bitcointrader/blob/main/EDA/Diagram.png" alt="diagram" width="600" height="350">
+<div align=center>
+  <img src="https://github.com/tayadeabhilash/bitcointrader/blob/main/EDA/Diagram.png" alt="diagram" width="600" height="350">
+</div>
 
 ## Discalimer 
 This project is developed for educational purposes as part of coursework. It serves to enhance understanding and practical application of machine learning models. However, it should not be construed as financial or investment advice. Users are encouraged to exercise caution and conduct thorough research before making any financial decisions based on the insights provided by this project.
